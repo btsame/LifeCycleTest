@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context="com.example.administrator.servicetest.MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="Service普通生命周期"
+                android:textColor="@android:color/black" />
+
+            <Button
+                android:id="@+id/start_service"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="start service"
+                tools:layout_editor_absoluteX="158dp"
+                tools:layout_editor_absoluteY="106dp" />
+
+            <Button
+                android:id="@+id/stop_service"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="stop service"
+                tools:layout_editor_absoluteX="160dp"
+                tools:layout_editor_absoluteY="184dp" />
+
+            <Button
+                android:id="@+id/bind_service"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="bind service"
+                tools:layout_editor_absoluteX="160dp"
+                tools:layout_editor_absoluteY="184dp" />
+
+            <Button
+                android:id="@+id/unbind_service"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="unbind service"
+                tools:layout_editor_absoluteX="160dp"
+                tools:layout_editor_absoluteY="184dp" />
+
+            <Button
+                android:id="@+id/bind_service_no_auto_create"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="40dp"
+                android:text="bind service no auto create"
+                tools:layout_editor_absoluteX="160dp"
+                tools:layout_editor_absoluteY="184dp" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Service高级生命周期" />
+            <!-- 绑定本地服务，返回的Binder对象是不是本地的 -->
+            <Button
+                android:id="@+id/bind_local_service_binder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="bind local service binder"
+                tools:layout_editor_absoluteX="160dp"
+                tools:layout_editor_absoluteY="184dp" />
+
+            <!-- 绑定异地服务，多次绑定运行的线程 -->
+            <Button
+                android:id="@+id/bind_remote_service_binder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="bind remote service binder"
+                tools:layout_editor_absoluteX="160dp"
+                tools:layout_editor_absoluteY="184dp" />
+
+
+            <!-- 广播 -->
+            <Button
+                android:id="@+id/send_static_local_bc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="send static local bc"
+                tools:layout_editor_absoluteX="160dp"
+                tools:layout_editor_absoluteY="184dp" />
+
+            <Button
+                android:id="@+id/send_static_remote_bc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="send static remote bc"
+                tools:layout_editor_absoluteX="160dp"
+                tools:layout_editor_absoluteY="184dp" />
+
+            <Button
+                android:id="@+id/send_dynamic_no_handler_bc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="send dynamic no handler bc"
+                tools:layout_editor_absoluteX="160dp"
+                tools:layout_editor_absoluteY="184dp" />
+
+            <Button
+                android:id="@+id/send_dynamic_hanlder_bc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="send dynamic hanlder bc"
+                tools:layout_editor_absoluteX="160dp"
+                tools:layout_editor_absoluteY="184dp" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

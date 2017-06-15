@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.administrator.servicetest">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".SubActivity">
+        </activity>
+
+        <service android:name=".service.LocalService">
+            <intent-filter>
+                <action android:name="com.fy.yb.localservice" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+
+        <service android:name=".service.RemoteService"
+            android:process=".remoteService">
+            <intent-filter>
+                <action android:name="com.fy.yb.remoteservice" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+
+        <receiver android:name=".receiver.StaticLocalReceiver">
+            <intent-filter>
+                <action android:name="com.fy.yb.staticLocalReceiver" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+
+        <!--android:process :号表示私有的APPName为packageName:remote 其他符号为私有的APPName就是属性值像.remote-->
+        <receiver android:name=".receiver.StaticRemoteReceiver"
+            android:process=".remote">
+            <intent-filter>
+                <action android:name="com.fy.yb.staticRemoteReceiver" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+</manifest>
