@@ -167,9 +167,9 @@ public class SubActivity extends AppCompatActivity implements View.OnClickListen
     }
 
     private void unregisterReceiver(){
-        unregisterReceiver(noHandlerReceiver);
-        unregisterReceiver(handlerReceiver);
-        unregisterReceiver(netStateReceiver);
+//        unregisterReceiver(noHandlerReceiver);
+//        unregisterReceiver(handlerReceiver);
+//        unregisterReceiver(netStateReceiver);
     }
 
     private void sendStaticLocalBC(){
